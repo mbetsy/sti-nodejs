@@ -18,6 +18,7 @@ LABEL BZComponent="nodejs010" \
       Version="0.10" \
       Release="1" \
       Architecture="x86_64"
+USER root
 
 RUN yum-config-manager --enable rhel-server-rhscl-7-rpms && \
     yum-config-manager --enable rhel-7-server-optional-rpms && \
