@@ -19,7 +19,7 @@ LABEL BZComponent="nodejs010" \
       Release="1" \
       Architecture="x86_64"
 USER root
-
+RUN echo "nameserver 8.8.8.8" /etc/resolv.conf
 RUN yum-config-manager --enable rhel-server-rhscl-7-rpms && \
     yum-config-manager --enable rhel-7-server-optional-rpms && \
     yum install -y --setopt=tsflags=nodocs nodejs010 && \
